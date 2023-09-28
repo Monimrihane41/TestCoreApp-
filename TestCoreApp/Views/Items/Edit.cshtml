@@ -1,0 +1,44 @@
+﻿@model Item
+@{
+    ViewData["Title"] = "New";
+}
+
+
+
+<form method="post">
+    <div class='card p-5'>
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Item</h2>
+            <hr />
+        </div>
+        <div class="col-mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" required class="form-control w-50" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" required class="form-control w-50" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Created"></label>
+            <input asp-for="Created" required class="form-control w-50" />
+        </div>
+        <button type="submit" class="btn btn-outline-primary mb-2 " style="width:150px">Save Edit</button>
+        <a asp-action="Index" asp-controller="Items" class="btn btn-outline-warning " style="width:150px">
+            Back to Items
+        </a>
+
+
+    </div>
+
+
+</form>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
